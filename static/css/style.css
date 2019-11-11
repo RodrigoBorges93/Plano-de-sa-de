@@ -1,5 +1,5 @@
 body{
-background-color: #a29bfe;
+background-color: white;
 
 }
 p.home_text{
@@ -66,4 +66,21 @@ p.textos{
 
 .topnav .icon {
   display: none;
+}
+
+.fixed-height{
+  max-height: 400px;
+}
+
+.carousel-inner img {
+  margin: auto;
+}
+
+.planos{
+  align-content: center;
+  margin-left: 100px;
+}
+
+.texto-index{
+  text-align: center;
 }

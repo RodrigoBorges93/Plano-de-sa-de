@@ -21,17 +21,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
-<div class="topnav" id="myTopnav">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Ronaldo Borges</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-
-<a class = "nav-link" href = "{% url 'home' %}"> Início </a>
-
-
-<a class = "nav-link" href = "{% url 'cadastro' %}"> Cotação </a>
-
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home'%}">Início <span class="sr-only">(página atual)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'cadastro'%}">Cotações</a>
+      </li>
+      <li class="nav-item dropdown">
+      </li>
+    </ul>
+  </div>
+</nav>
 <a class = "nav-link float" target = "_blank" href = "http://api.whatsapp.com/send?1=pt_BR&phone=5521997640206"><i class="fa fa-whatsapp my-float"></i>
 </a>
-</div>
  {% if messages %}
 <ul class="messages">
     {% for message in messages %}
