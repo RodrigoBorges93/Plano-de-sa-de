@@ -1,0 +1,43 @@
+{% load staticfiles %}
+        <!DOCTYPE html>
+
+<html lang="en">
+  <meta name = "viewport" content = "width = device-width initial-scale = 1.0"
+<head>
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://use.fontawesome.com/releases/v5.8.2/css/all.css"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<div class="topnav" id="myTopnav">
+
+
+<a class = "nav-link" href = "{% url 'home' %}"> Início </a>
+
+
+<a class = "nav-link" href = "{% url 'cadastro' %}"> Cotação </a>
+
+<a class = "nav-link float" target = "_blank" href = "http://api.whatsapp.com/send?1=pt_BR&phone=5521997640206"><i class="fa fa-whatsapp my-float"></i>
+</a>
+</div>
+ {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="text-{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+    {% block content %}{% endblock content %}
+</html>

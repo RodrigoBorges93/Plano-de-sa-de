@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class = "container">
+  <br>
+<h4> Antes de ter acesso ao nosso mapa de cotações, preencha as informações abaixo, elas ajudarão a acharmos o melhor plano para você </h4>
+</div>
+<br>
+
+<div class = "container">
+<form method="POST">{% csrf_token %}
+{{ form|crispy }}
+<div class = "center2 container">
+<button type="submit" class="btn btn-success col-12" id = "cadastro">Ir para cotações</button>
+</div>
+</div>
+{% endblock content %}

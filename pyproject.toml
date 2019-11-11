@@ -1,0 +1,13 @@
+[tool]
+[tool.poetry]
+authors = ["Your Name <you@example.com>"]
+name = "main"
+version = "0.0.0"
+[tool.poetry.dependencies]
+crispy-forms-foundation = "*"
+django = "*"
+django-crispy-forms = "==1.7.2"
+django-phone-field = "*"
+django-smtp-ssl = "*"
+pillow = "==5.2.0"
+python = "^3.7"
