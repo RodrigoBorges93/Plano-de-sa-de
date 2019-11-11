@@ -85,6 +85,7 @@ p.textos{
 
 .texto-index{
   text-align: center;
+  color: #33CC66;
 }
 
 @media only screen and (max-width: 768px) {
